@@ -1,5 +1,6 @@
 # EdgeToEdgeSample
 Test Edge to Edge, the new feature of Android Q
+Also, test how to draw view under the status bar
 
 ## How to Achieve Edge to Edge / Fullscreen content
 
