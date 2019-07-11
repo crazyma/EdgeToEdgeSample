@@ -18,6 +18,10 @@ class MainActivity : AppCompatActivity() {
             R.id.edgeToEdgeButton -> {
                 startActivity(Intent(this@MainActivity, EdgeToEdgeActivity::class.java))
             }
+
+            R.id.noStatusButton1 -> {
+                startActivity(Intent(this@MainActivity, NoStatusBarActivity1::class.java))
+            }
         }
     }
 }
