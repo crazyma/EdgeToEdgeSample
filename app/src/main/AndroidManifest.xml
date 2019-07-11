@@ -24,6 +24,9 @@
         <activity
             android:name=".NoStatusBarActivity1"
             android:theme="@style/AppTheme.NoStatus" />
+        <activity
+            android:name=".NoStatusBarActivity2"
+            android:theme="@style/AppTheme.NoStatus" />
     </application>
 
 </manifest>

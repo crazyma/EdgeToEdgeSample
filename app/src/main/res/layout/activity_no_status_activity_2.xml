@@ -11,6 +11,7 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -21,20 +22,22 @@
             app:contentScrim="?attr/colorPrimary"
             app:titleEnabled="false">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/mario"
-                android:fitsSystemWindows="true"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:fitsSystemWindows="true"
-                android:gravity="center_horizontal|top"
-                android:text="This is a book."
-                android:textColor="@android:color/black" />
-
         </com.google.android.material.appbar.CollapsingToolbarLayout>
+
     </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mario"
+        android:fitsSystemWindows="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal|top"
+        android:text="This is a book."
+        android:textColor="@android:color/black"
+        app:layout_collapseMode="pin" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
