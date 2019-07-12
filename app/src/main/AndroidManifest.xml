@@ -32,7 +32,7 @@
             android:theme="@style/AppTheme.NoStatus" />
         <activity
             android:name=".NoStatusBarActivity4"
-            android:theme="@style/AppTheme.NoStatus" />
+            android:theme="@style/AppTheme.NoStatus.NoNavigation" />
     </application>
 
 </manifest>
