@@ -10,27 +10,50 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:background="@android:color/transparent"
         android:fitsSystemWindows="true">
 
+        <!-- different `layout_scrollFlags` would cause different unexpected result-->
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsingToolbarLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll"
             app:titleEnabled="false">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="?actionBarTheme"
+                app:layout_collapseMode="pin"
+                app:popupTheme="?attr/actionBarPopupTheme" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="2000dp"
+            android:background="@android:color/black" />
+
+
+    </androidx.core.widget.NestedScrollView>
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/mario"
-        android:fitsSystemWindows="true"/>
+        android:fitsSystemWindows="true"
+        android:src="@drawable/mario" />
 
     <TextView
         android:layout_width="match_parent"
