@@ -11,7 +11,6 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@android:color/transparent"
         android:fitsSystemWindows="true">
 
         <!-- different `layout_scrollFlags` would cause different unexpected result-->
