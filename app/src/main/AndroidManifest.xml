@@ -30,6 +30,9 @@
         <activity
             android:name=".NoStatusBarActivity3"
             android:theme="@style/AppTheme.NoStatus" />
+        <activity
+            android:name=".NoStatusBarActivity4"
+            android:theme="@style/AppTheme.NoStatus" />
     </application>
 
 </manifest>
