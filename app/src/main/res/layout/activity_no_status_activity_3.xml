@@ -14,38 +14,25 @@
         android:background="@android:color/transparent"
         android:fitsSystemWindows="true">
 
-        <!-- different `layout_scrollFlags` would cause different unexpected result-->
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsingToolbarLayout"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="exitUntilCollapsed|scroll"
-            app:titleEnabled="false">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:theme="?actionBarTheme"
-                app:layout_collapseMode="pin"
-                app:popupTheme="?attr/actionBarPopupTheme" />
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
+            android:layout_height="?attr/actionBarSize"
+            android:theme="?actionBarTheme"
+            app:layout_collapseMode="pin"
+            app:popupTheme="?attr/actionBarPopupTheme" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_height="match_parent">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:lineSpacingExtra="8dp"
-            android:padding="10dp"
             android:text="羅東運動公園位於宜蘭縣羅東鎮近郊，是座充滿運動設施、綠地以及親水設計的休憩場所。運動公園佔地47公頃，有著開闊的草地以及扶疏的林木，籃球場、網球場、棒球場、田徑場、游泳池等等設施座落其中，並有交橫的流水及湖泊串聯各項景觀，十分美麗，是羅東人平時休閒的去處也是外縣市民眾至宜蘭縣的一個主要觀光旅遊景點。1986年，臺灣省政府教育廳「75教六字第83477號函」同意宜蘭縣政府於羅東鎮北城地區興建羅東運動公園。1987年，臺灣省政府地政處核准宜蘭縣政府徵收羅東運動公園用地及變更編定為特定目的事業用地。1996年3月，羅東運動公園建成啟用，投注總經費新臺幣7.56億元（含土地徵收費新臺幣1.8億元）。融合傳統陰陽、五行、八卦等布置。
 主分為4區塊：南朱雀、北玄武、東青龍、西白虎，並以其象徵性作為景觀設計。有兩座游泳池，25米長方形泳池與兒童戲水池；並有提供熱水沖洗，而且入場票十分便宜。羅東運動公園位於宜蘭縣羅東鎮近郊，是座充滿運動設施、綠地以及親水設計的休憩場所。運動公園佔地47公頃，有著開闊的草地以及扶疏的林木，籃球場、網球場、棒球場、田徑場、游泳池等等設施座落其中，並有交橫的流水及湖泊串聯各項景觀，十分美麗，是羅東人平時休閒的去處也是外縣市民眾至宜蘭縣的一個主要觀光旅遊景點。1986年，臺灣省政府教育廳「75教六字第83477號函」同意宜蘭縣政府於羅東鎮北城地區興建羅東運動公園。1987年，臺灣省政府地政處核准宜蘭縣政府徵收羅東運動公園用地及變更編定為特定目的事業用地。1996年3月，羅東運動公園建成啟用，投注總經費新臺幣7.56億元（含土地徵收費新臺幣1.8億元）。融合傳統陰陽、五行、八卦等布置。
 主分為4區塊：南朱雀、北玄武、東青龍、西白虎，並以其象徵性作為景觀設計。有兩座游泳池，25米長方形泳池與兒童戲水池；並有提供熱水沖洗，而且入場票十分便宜。"
@@ -57,15 +44,22 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
         android:fitsSystemWindows="true"
         android:src="@drawable/mario" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:background="#888"
         android:fitsSystemWindows="true"
         android:gravity="center_horizontal|top"
         android:text="This is a book."
         android:textColor="@android:color/black"
-        app:layout_collapseMode="pin" />
+        android:textSize="32sp" />
+
+
+    <!-- If all the view `fitsSystemWindows`, the last one would has `no top inset`-->
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

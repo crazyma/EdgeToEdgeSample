@@ -26,6 +26,10 @@ class MainActivity : AppCompatActivity() {
             R.id.noStatusButton2 -> {
                 startActivity(Intent(this@MainActivity, NoStatusBarActivity2::class.java))
             }
+
+            R.id.noStatusButton3 -> {
+                startActivity(Intent(this@MainActivity, NoStatusBarActivity3::class.java))
+            }
         }
     }
 }
